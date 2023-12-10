@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active:
+    - dev
+  application:
+    name: contact-management
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_rest_full_api
+    username: root
+    password: bagatal
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      # Minimun koneksi yang open
+      minimum-idle: 10
+      # Maximun koneksi yang open
+      maximum-pool-size: 50
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+       dialec: org.hibernate.dialect.MySQLDialect
+       '[format_sql]': true
